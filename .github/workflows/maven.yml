@@ -31,7 +31,7 @@ jobs:
       run: mvn -B package --file pom.xml
 
     - name: Invoke Jenkins Deployment Job
-      uses: appleboy/jenkins-action@main
+      uses: appleboy/jenkins-action@master
       with:
         url: "http://localhost:8080"
         user: "admin"
