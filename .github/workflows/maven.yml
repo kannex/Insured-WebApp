@@ -30,4 +30,13 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
+    - name: Set up JDK 17
+      uses: actions/setup-java@v4
+      with:
+        url: "http://localhost:8080"
+        user: "admin"
+        token: ${{ secrets.JENKINS_TOKEN}}
+        job: "TomcatDeployement"
+      
+
     
